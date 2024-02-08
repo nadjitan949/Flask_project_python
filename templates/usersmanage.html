@@ -1,0 +1,38 @@
+{% extends 'base3.html' %}
+
+{% block main %}
+<br><br>
+<h3 style="text-align: center;">Gerer les utilisateurs</h3><br><br>
+<div class="manage">
+    <div class="products" style="background-color: rgba(211, 211, 211, 0.322);"><a href="{{ url_for('adpan') }}"><i class="fa-solid fa-car"></i></a></div>
+    <div class="users" style="background-color: aliceblue;"><a href=""><i class="fa-solid fa-users"></i></a></div>
+</div>
+<main class="tab">
+    <br><br>
+    <div class="tableau">
+        {% if liste %}
+        <table class="table" border="1">
+            <tr>
+                <td></td>
+                <td style="font-weight: bold;">Nom:</td>
+                <td style="font-weight: bold;">Email:</td>
+                <td style="font-weight: bold;">Action:</td>
+            </tr>
+            {% for list in liste %}
+            <tr>
+                <td><i class="fa-solid fa-user-check" style="color: rgb(41, 134, 226);"></i></td>
+                <td style="padding: 20px;">{{ list.nom_user }}</td>
+                <td style="padding: 20px;">{{ list.add_mail }}</td>
+                <td style="padding: 20px;">
+                    <a href="/deluse/{{ list.id }}" class="submit"><i class="fa-solid fa-user-xmark"></i> Retirer</a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        {% else %}
+            <p style="font-weight: bold;">Pas d'utilisateurs</p>
+        {% endif %}
+        </table>
+    </div>
+</main><br>
+{% endblock %}

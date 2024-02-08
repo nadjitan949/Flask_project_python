@@ -1,0 +1,48 @@
+{% extends 'base3.html' %}
+
+{% block main %}
+<br><br>
+<h3 style="text-align: center;">listes des produits</h3><br><br>
+<div class="manage">
+    <div class="products"><a href=""><i class="fa-solid fa-car"></i></a></div>
+    <div class="users"><a href="{{ url_for('usemanage') }}"><i class="fa-solid fa-users"></i></a></div>
+</div>
+<main class="tab">
+    <br><br>
+    <div class="tableau">
+        {% if liste %}
+        <table class="table" border="1">
+            <tr>
+                <td></td>
+                <td style="font-weight: bold;">Nom:</td>
+                <td style="font-weight: bold;">Prix:</td>
+                <td style="font-weight: bold;">Photo:</td>
+                <td style="font-weight: bold;">Qté:</td>
+                <td style="font-weight: bold;">Admin:</td>
+                <td style="font-weight: bold;">Action:</td>
+            </tr>
+            {% for list in liste %}
+            <tr>
+                <td><i class="fa-solid fa-circle-check" style="color: rgb(41, 134, 226);"></i></td>
+                <td>{{ list.nom }}</td>
+                <td>{{ list.prix }}</td>
+                <td><img src="/static/images/{{ list.photo }}" alt=""></td>
+                <td>{{ list.quantite }}</td>
+                <td> {{ list.admin_id }} </td>
+                <td>
+                    <a href="/delpro/{{ list.id }}" class="submit"><i class="fa-regular fa-trash-can"></i> Supprimer</a>
+                    <a href="/update/{{ list.id }}">Modifier <i class="fa-solid fa-pencil"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        {% else %}
+            <p style="font-weight: bold;">Pas de produits</p>
+        {% endif %}
+        </table>
+    </div>
+</main><br>
+<div class="ajout">
+    <a href="{{ url_for('add_product') }}">+ Ajouter</a>
+</div>
+{% endblock %}

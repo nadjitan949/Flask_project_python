@@ -1,0 +1,39 @@
+{% extends 'base2.html' %}
+
+{% block main %}
+<br><br><br>
+<main class="logad-form">
+    <form action="" method="POST" style="display: flex; flex-direction: column; align-items: center;">
+        <i class="fa-solid fa-user" style="font-size: 50px; color: rgb(41, 134, 226);"></i><br><br>
+        {{ form.hidden_tag() }}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="alert" style="width: 770px;">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul><br>
+        {% endif %}
+        {% endwith %}
+    
+        {% if form.errors %}
+        <div>
+            <ul class="alert" style="width: 770px;">
+                {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                <li>{{ field }}: {{ error }}</li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+        </div><br>
+        {% endif %}
+
+        <p> {{ form.user_name }} </p><br>
+        <p> {{ form.password }} </p><br>
+        <div class="input">
+            {{ form.connexion }}
+        </div><br>
+        <a href="{{ url_for('AdSign') }}">Creer un compte Admin</a>
+    </form>
+</main>
+{% endblock %}

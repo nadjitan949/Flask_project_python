@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<p style="height: 500px; text-align: center; margin-top: 50px;" class="rdv">
+    Votre demande est en cours d'execution, veuillez
+    patienter pour la confirmation <br><br><br>
+    <a href="{{ url_for('index') }}" style="color: white;
+     width: 100px;
+     background-color: rgb(41, 134, 226); 
+     padding: 20px; border-style: double;
+     border-radius: 20px;">
+        Ok
+    </a>
+</p>
+
+{% endblock %}

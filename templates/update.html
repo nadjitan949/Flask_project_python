@@ -1,0 +1,53 @@
+{% extends 'base3.html' %}
+
+{% block main %}
+<form action="/update/{{ product.id }}" method="POST" enctype="multipart/form-data"> 
+    {{ form.hidden_tag() }}
+    {% if form.errors %}
+    <div>
+        <ul class="alert">
+            {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+            <li>{{ field }}: {{ error }}</li>
+            {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="alert_vert">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul><br>
+    {% endif %}
+    {% endwith %}
+    <br>
+    <p>
+        {{ form.name( value = product.nom ) }}
+    </p><br>
+    <p>
+        {{ form.price( value = product.prix ) }}
+    </p><br>
+    <p>
+        {{ form.description( value = product.description ) }}
+    </p><br>
+    <p>
+        {{ form.quantite( value = product.quantite ) }}
+    </p><br>
+    <p>
+        <div class="img">
+            <i class="fa-solid fa-upload" style="color: white;"></i>
+            {{ form.img.label }}
+            {{ form.img }}
+        </div><br>
+    </p>
+    <p>
+        <div class="input">
+            {{ form.addp }}
+        </div>
+    </p><br>
+    <a href="{{ url_for('adpan') }}">Voir les produits</a>
+</form><br>
+{% endblock %}

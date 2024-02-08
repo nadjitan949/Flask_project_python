@@ -1,0 +1,172 @@
+*{
+    list-style-type: none;
+}
+.tab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.322);
+    width: 90%;
+    margin: auto;
+}
+.tableau{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tableau .table{
+    width: 100%;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(41, 134, 226);
+    border-radius: 5px;
+}
+.tab .table{
+    border-collapse: collapse;
+}
+.tableau img{
+    width: 100px;
+    height: 60px;
+}
+.tableau td{
+   text-align: center;
+}
+.tableau tr{
+    border: 2px solid white;
+    border-color: rgba(211, 211, 211, 0.322);
+    border-bottom-color: white ;
+ }
+.tableau .submit{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid;
+    border-color: red;
+    background-color: white;
+    font-weight: bold;
+    color: red;
+}
+.tableau a{
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(41, 134, 226);
+    color: white;
+}
+.tableau a:hover{
+    background-color: rgb(115, 163, 252);
+}
+.tableau .submit:hover{
+    color: white;
+    background-color: red;
+}
+.ajout a{
+    margin-left: 96px;
+    background-color: rgb(41, 134, 226);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+.ajout a:hover{
+    background-color: rgb(131, 173, 252);
+    color: white;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+}
+.headlog-a .statut{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 5px;
+}
+.headlog-a .photoA{
+    width: 55px;
+    height: 50px;
+}
+.headlog-a .photoA img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.headlog-a .NomA{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.headlog-a .NomA{
+    width: 100px;
+}
+.headlog-a .NomA span{
+    color: white;
+}
+.headlog-a .NomA .ligne{
+    color: rgba(255, 255, 255, 0.585);
+    font-size: 13px;
+    border: none;
+}
+.headlog-a a{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.headlog-a a:hover{
+    background-color: white;
+    color: rgb(41, 134, 226);
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(41, 134, 226);
+}
+.manage{
+    height: 60px;
+    width: 120px;
+    margin-left: 96px;
+    display: flex;
+}
+.manage div{
+    height: 100%;
+    width: 50%;
+    background-color: rgba(211, 211, 211, 0.322);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.manage .products{
+    background-color: aliceblue;
+}
+.manage a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+.manage a:hover{
+    color: rgba(83, 83, 83, 0.527);
+}
+.manage a:focus{
+    background-color: aliceblue;
+}

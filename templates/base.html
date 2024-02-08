@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Voiture.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='shoponly.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='service.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='messages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/all.css') }}">
+    <script src="https://kit.fontawesome.com/e398d2eba2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Entete -->
+
+    <header class="entete">
+        <h1 class="Logo">FOR<span>MULA</span></h1>
+        {% if user_email %}
+        <p style="position: absolute; top: 40px; right: 210px; color: gray;"><i class="fa-solid fa-user"></i> {{user_email }} </p>
+        <a href="{{url_for('logout')}}" class="Connexion">Deconnexion <i class="fa-solid fa-right-from-bracket"></i></a>
+        {% else %}
+        <a href="{{url_for('login')}}" class="Connexion"><i class="fa-solid fa-right-to-bracket"></i> Conexion</a>
+        {% endif %}
+        <nav class="Naviguation">
+            <ul>
+                <li><a href="{{url_for('index')}}"><i class="fa-solid fa-house"></i> Acceuille</a></li>
+                <li><a href="{{url_for('shop')}}"><i class="fa-solid fa-car"></i> Voitures</a></li>
+                <li><a href="{{url_for('service')}}">Service</a></li>
+                <li><a href="{{url_for('about')}}">A propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="alert_vert" style="color: orange; text-align: center; background-color: rgba(255, 166, 0, 0.158); border-color: orange;">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul><br>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Contenus pages -->
+
+    {% block main %}
+    {% endblock %}
+
+    <!-- footer -->
+
+    <footer class="pied">
+        <div class="contact">
+            <h3>Contactez nous</h3>
+            <a href="#">Tel: 96 71 77 42</a>
+            <a href="#">Email</a>
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>Tiktok</span>
+        </div>
+        <div class="contact">
+            <a href="{{url_for('index')}}">Acceuille</a>
+            <a href="{{url_for('shop')}}">Voitures</a>
+            <a href="{{url_for('service')}}">Service</a>
+            <a href="{{url_for('about')}}">A propos</a>
+        </div>
+        <div class="contact">
+            <h3>Contactez nous</h3>
+            <a href="#">Tel: 96 71 77 42</a>
+            <a href="#">Email</a>
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>Tiktok</span>
+        </div>
+        <div class="contact">
+            <a href="{{url_for('index')}}">Acceuille</a>
+            <a href="{{url_for('shop')}}">Voitures</a>
+            <a href="{{url_for('service')}}">Service</a>
+            <a href="{{url_for('about')}}">A propos</a>
+        </div>
+        <div class="contact">
+            <a href="{{url_for('index')}}">Acceuille</a>
+            <a href="{{url_for('shop')}}">Voitures</a>
+            <a href="{{url_for('service')}}">Service</a>
+            <a href="{{url_for('about')}}">A propos</a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.con{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(41, 134, 226);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.con h1{
+    color: aliceblue;
+}
+.con p{
+    color: aliceblue;
+}
+form{
+    margin: auto;
+}
+form label{
+    color: rgb(41, 134, 226);
+}
+form input{
+    width: 788px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+form input:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px;
+    color: rgba(41, 133, 226, 0.5);
+}
+form .input input{
+    width: 800px;
+    height: 40px;
+    background-color: rgb(41, 134, 226);
+    font-weight: bold;
+    color: aliceblue;
+    border:1px solid rgb(41, 134, 226);
+    border-radius: 5px;
+}
+form .img{
+    background-color: rgb(41, 134, 226);
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    gap: 5px;
+}
+form .img input{
+    border: 1px solid;
+}
+form .input input:hover{
+    background-color: rgb(134, 194, 253);
+    border-color: rgb(134, 194, 253);
+}
+form a{
+    color: rgb(134, 194, 253);
+    font-weight: bold;
+}
+form .img input[type = "file"]{
+    display: none;
+    background-color: rgb(41, 134, 226);
+    border: 1px solid;
+}
+form .img label{
+    color: white;
+    font-weight: bold;
+}

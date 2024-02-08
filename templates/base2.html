@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='adminLogin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='adminpannel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Voiture.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='messages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/all.css') }}">
+    <script src="https://kit.fontawesome.com/e398d2eba2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="headlog-a">
+        <h1 class="">CONNEXION</h1><br>
+        <h2>Administrateurs</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptate iste vel excepturi ipsam ipsa autem nihil praesentium
+            nam earum ea quo beatae asperiores, consequuntur blanditiis
+            quibusdam facere nobis tempore voluptas!
+        </p>
+        <a href="{{ url_for('index') }}">Quitter</a>
+    </header>
+    {% block main %}
+    {% endblock %}
+</body>
+
+</html>

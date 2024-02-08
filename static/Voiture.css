@@ -1,0 +1,293 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    transition: all.2s linear;
+}
+body{
+    background-color: aliceblue;
+}
+
+/* entete*/
+
+.entete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0 0 5px;
+    z-index: 1;
+}
+.entete .Logo{
+    position: absolute;
+    line-height: 100px;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 30px;
+    left: 40px;
+    color: rgb(32, 32, 32);
+    font-family: fantasy;
+}
+.entete .Logo span{
+    background: linear-gradient(to right, rgb(182, 213, 238), rgb(41, 134, 226), rgb(182, 213, 238));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: fantasy;
+}
+.Connexion{
+    position: absolute;
+    right: 25px;
+    top: 27px;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 15px;
+    color: aliceblue;
+    background-color: rgb(41, 134, 226);
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.Connexion:hover{
+    background-color: rgb(114, 173, 233);
+}
+.Naviguation{
+    align-items: center;
+    justify-content: center;
+}
+.Naviguation ul{
+    display: flex;
+    top: 40px;
+    gap: 4rem;
+    padding: 0;
+}
+.Naviguation li{
+    list-style: none;
+}
+.Naviguation a{
+    color: rgb(104, 104, 104);
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    border: solid;
+    border-color: transparent;
+}
+.Naviguation a:hover{
+    color: rgb(41, 134, 226);
+    border-bottom-color: rgb(41, 134, 226);
+}
+
+/* Annonce */
+
+.contenaire{
+    display: flex;
+    height: 520px;
+    width: 95%;
+    margin: 0 auto;
+}
+.text{
+    position: absolute;
+    left: 80px;
+    height: 300px;
+    width: 45%;
+    margin-left: auto;
+}
+.text .titre{
+    font-size: 55px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(182, 213, 238), rgb(41, 134, 226), rgb(182, 213, 238));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+.text .Paragraphe{
+    font-size: 13px;
+    color: rgb(75, 75, 75);
+    font-family: sans-serif;
+}
+
+.Photo{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 650px;
+    width: 56%;
+}
+.Photo img{
+    height: 100%;
+    width: 100%;
+}
+.cercles{
+    width: 250px;
+    height: 70px;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+}
+.cercles .cercle{
+    border: 8px solid;
+    border-color: rgb(41, 134, 226);
+    border-right-color: aliceblue;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cercle div{
+    height: 53px;
+    width: 53px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.bare{
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 240px;
+    left: 30px;
+    display: flex;
+    gap: 2.5rem;
+}
+.bare .bar{
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    background-color: aliceblue;
+}
+.bar span{
+    font-family: fantasy;
+    color: rgb(41, 134, 226);
+    border: none;
+}
+
+/* Offres */
+
+.Offres{
+    display: flex;
+    gap: 2rem;
+    width: 725px;
+    height: 100px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.654);
+    
+}
+.ligne{
+    border: 1px solid rgb(199, 199, 199);
+    height: 70px;
+    border-radius: 1px;
+}
+.Offres .un{
+    padding: 30px 55px;
+}
+.Offres .un .num{
+    font-weight: bold;
+    font-size: 38px;
+    color: rgb(41, 134, 226);
+    font-family: fantasy;
+}
+.Offres .un .Desc{
+    font-size: 14px;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Derniers produits */
+.derprod{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(41, 134, 226);
+}
+.produits{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(201, 201, 201, 0.123);
+    z-index: 1;
+}
+.produits .produit{
+    width: 560px;
+    height: 460px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 23px;
+    border: 1px solid rgba(211, 211, 211, 0.486);
+    transition: transform 0.3s ease-out;
+}
+.produits img{
+    width: 99%;
+    height: 99%;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+.produits img:hover{
+    transform: scale(0.95);
+}
+.produit span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(41, 134, 226);
+}
+.produit a{
+    background-color: rgb(41, 134, 226);
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    font-weight: bold;
+}
+.produit a:hover{
+    background-color: rgb(114, 173, 233);
+}
+
+/* footer */
+
+.pied{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(41, 134, 226);
+    padding-top: 10px;
+    display: flex;
+    gap: 8rem;
+}
+.contact{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    gap: 2rem;
+}
+.contact h3{
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+.contact span{
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+.contact a{
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(41, 134, 226);
+}

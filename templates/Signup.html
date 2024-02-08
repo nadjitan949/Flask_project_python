@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="con">
+    <h1>Créer un compte</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+        accusantium tempora esse alias soluta, quaerat libero molestiae
+        consectetu</p>
+</div><br>
+
+<form action="{{ url_for('Signup') }}" method="POST" style="display: flex; flex-direction: column; align-items: center;">
+    <i class="fa-solid fa-user-plus" style="font-size: 50px; color: rgb(41, 134, 226);"></i> <br><br>
+    {{ form.hidden_tag() }}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="alert" style="width: 770px;">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul><br>
+    {% endif %}
+    {% endwith %}
+    {% if form.errors %}
+    <div>
+        <ul class="alert">
+            {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+            <li>{{ field }}: {{ error }}</li>
+            {% endfor %}
+            {% endfor %}
+        </ul>
+    </div><br>
+    {% endif %}
+    <p>
+        {{ form.name }}<br><br>
+    </p>
+    <p>
+        {{ form.email }}<br><br>
+    </p>
+    <p>
+        {{ form.password }}<br><br>
+    </p>
+    <div class="input">
+        {{ form.connexion }}
+    </div><br>
+    <a href="{{ url_for('login') }}">Se connecter</a>
+</form><br><br><br>
+{% endblock %}

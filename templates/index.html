@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block main %}
+<br><br><br><br><br><br><br><br>
+<main>
+    <div class="contenaire">
+        <div class="text">
+            <span class="titre">Elevating your <br> vehivule's potential.</span><br><br>
+            <span class="Paragraphe">Lorem ipsum dolor sit amet consectetur adipisi realistic man et puis c ca <br>
+                elit. Quam,
+                nesciunt! Eaque, dolores! Nisi, facere telement dle la meiuf sa <br> perspiciatis totam asperiores
+            </span><br><br>
+            <main class="cercles">
+                <div class="cercle">
+                    <div></div>
+                </div>
+                <div class="cercle">
+                    <div></div>
+                </div>
+            </main><br>
+            <main class="bare">
+                <div class="bar"><span>6071 HP</span></div>
+                <div class="bar"><span>9400 HP</span></div>
+            </main>
+        </div>
+        <div class="Photo">
+            <img src="{{ url_for('static', filename='images/Porche.png') }}" alt="">
+        </div>
+    </div><br><br><br>
+
+    <div class="Offres">
+        <div class="un">
+            <span class="num">12+</span><br>
+            <span class="Desc">partis</span>
+        </div>
+        <div class="ligne"></div>
+        <div class="un">
+            <span class="num">108+</span><br>
+            <span class="Desc">vite</span>
+        </div>
+        <div class="ligne"></div>
+        <div class="un">
+            <span class="num">4+</span><br>
+            <span class="Desc">gardien</span>
+        </div>
+    </div><br><br>
+
+    <!-- Derniers produits -->
+    <h1 class="derprod">Nos trois derniers produits</h1><br><br>
+    <main class="produits">
+        {% if produit %}
+        {% for pro in produit %}
+        <div class="produit">
+            <a href="{{ url_for('show', id=pro.id) }}" style="background-color: rgba(211, 211, 211, 0);">
+                <img src="/static/images/{{ pro.photo }}" alt=""><br>
+            </a>
+            <span> {{ pro.nom }} </span>
+            <span>{{ pro.prix }} <span>$</span></span>
+            <a href="{{ url_for('show', id=pro.id) }}"><i class="fa-solid fa-eye"></i> Inspecter </a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p style="font-weight: bold;">Pas de produits pour le moment</p>
+        {% endif %}
+    </main><br><br>
+</main>
+{% endblock %}

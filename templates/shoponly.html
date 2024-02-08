@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="shopeo">
+    <h1>Voire la voiture</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+        accusantium tempora esse alias soluta, quaerat libero molestiae
+        consectetu</p>
+</div><br><br>
+<main class="insvoit">
+    <div class="phovoit">
+        <img src="/static/images/{{ liste.photo }}" alt="">
+    </div>
+    <div class="desvoit">
+        <span>Marque: <strong> {{ liste.nom }} </strong></span>
+        <span>Prix: <strong> {{ liste.prix }}<span>$</span></strong></span><br>
+        <hr><br>
+        <h4>Descriptions:</h4>
+        <p> {{ liste.description }} </p><br>
+        <hr><br>
+        <div class="bouton"><a href="{{ url_for('rdv') }}"
+                style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                Prendre rendez-vous
+            </a>
+        </div>
+</main><br><br>
+{% endblock %}

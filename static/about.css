@@ -1,0 +1,31 @@
+
+.propo{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 550px;
+    background-color: rgba(41, 133, 226, 0.938);
+    display: flex;
+
+}
+.propo div{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.propo div h1{
+    color: aliceblue;
+}
+.propo div p{
+    color: rgba(240, 248, 255, 0.623);
+}
+.propo .logo{
+    height: 445px;
+    width: 35%;
+}
+.propo img{
+    width: 100%;
+    height: 350px;
+}

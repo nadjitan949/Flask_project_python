@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="shope">
+    <h1>Voitures</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+        accusantium tempora esse alias soluta, quaerat libero molestiae
+        consectetu</p>
+</div><br><br>
+<main class="shops">
+    {% if liste %}
+    {% for list in liste %}
+    <div class="shop">
+        <a href="{{ url_for('show', id=list.id) }}" style="background-color: transparent;">
+            <img src="/static/images/{{ list.photo }}" alt="">
+        </a>
+        <span> {{ list.nom }} </span>
+        <span> {{ list.prix }} <span>$</span></span>
+        <a href="{{ url_for('show', id=list.id) }}"><i class="fa-solid fa-eye"></i> Ispecter</a>
+    </div>
+    {% endfor %}
+    {% endif %}
+</main><br><br>
+{% endblock %}

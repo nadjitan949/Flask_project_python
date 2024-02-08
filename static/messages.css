@@ -1,0 +1,16 @@
+.alert {
+    list-style-type: none;
+    color: rgb(207, 29, 44);
+    background-color: rgba(207, 29, 44, 0.308);
+    border: 2px solid rgb(207, 29, 44);
+    padding: 20px;
+    border-radius: 10px;
+}
+.alert_vert{
+    list-style-type: none;
+    color: green;
+    background-color: rgba(0, 128, 0, 0.363);
+    border: 2px solid green;
+    padding: 20px;
+    border-radius: 10px;
+}
